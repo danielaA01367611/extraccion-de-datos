@@ -41,5 +41,13 @@ filtro6.to_csv('entregable6.csv')
 #Filtro 7: Hice dos filtros. Usando una condición and. Donde se deben de cumplir el filtro que subtotal_partida sea mayor a 77000 y que la fehca_doc sea igual a 2022-05-24
 #Filtro Y Tiene que cumplir las dos condiciones
 filtro7=df[(df["SUBTOTAL_PARTIDA"] > 77000) & (df["FECHA_DOC"] == "2022-05-24")]
-print(filtro7)
+#print(filtro7)
 filtro7.to_csv('entregable7.csv')
+
+# Filtro 8: Ahora filtre con una condición or. Donde se muestren los dados donde el subtotal_partida sea mayor a 77000 o el que la fehca_doc sea igual a 2022-05-24
+#Filtro o
+filtro8=df[(df["SUBTOTAL_PARTIDA"] > 77000)| (df["FECHA_DOC"] == "2022-05-24")]
+print(filtro8)
+filtro8.to_csv('entregable8.csv')
+
+
