@@ -16,10 +16,15 @@ filtro2.to_csv('practica_facturacion2.csv')
 # year-month
 #filtro3=df[ df["FECHA_ENT"].dt.strftime('%Y-%m') == '2019-10']
 # year-month-day
-filtro3=df[ df["FECHA_ENT"].dt.strftime('%Y-%m-%d') == '2019-10-02']
-print(filtro3)
+df['FECHAELAB'] = pd.to_datetime(df['FECHAELAB'])
+filtro3=df[ df["FECHAELAB"].dt.strftime('%Y-%m-%d') == '2019-10-02']
+#print(filtro3)
 filtro3.to_csv('practica_facturacion3.csv')
 
 filtro4=df[(df["CAN_TOT"] < 5951.7)| (df["STATUS"] == "E")]
 #print(filtro4)
 filtro4.to_csv('practica_facturacion4.csv')
+
+filtro5 = df.iloc[ : , [0, 6, 7,9]]  
+print(filtro5)
+filtro5.to_csv('practica_facturacion5.csv')
