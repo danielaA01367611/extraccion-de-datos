@@ -35,7 +35,11 @@ filtro5.to_csv('entregable5.csv')
 
 #Filtro 6: Filtre por comparación, para obtener los datos donde el valor en subtotal_partida sea mayor a 77000
 filtro6=df[df["SUBTOTAL_PARTIDA"] > 77000]
-print(filtro6)
+#print(filtro6)
 filtro6.to_csv('entregable6.csv')
 
-
+#Filtro 7: Hice dos filtros. Usando una condición and. Donde se deben de cumplir el filtro que subtotal_partida sea mayor a 77000 y que la fehca_doc sea igual a 2022-05-24
+#Filtro Y Tiene que cumplir las dos condiciones
+filtro7=df[(df["SUBTOTAL_PARTIDA"] > 77000) & (df["FECHA_DOC"] == "2022-05-24")]
+print(filtro7)
+filtro7.to_csv('entregable7.csv')
