@@ -26,5 +26,9 @@ filtro4=df[(df["CAN_TOT"] < 5951.7)| (df["STATUS"] == "E")]
 filtro4.to_csv('practica_facturacion4.csv')
 
 filtro5 = df.iloc[ : , [0, 6, 7,9]]  
-print(filtro5)
+#print(filtro5)
 filtro5.to_csv('practica_facturacion5.csv')
+
+#filtro nivel renglon
+filtro6 = df.iloc[7001:7003, [0,1,2] ] 
+#print(filtro6)
