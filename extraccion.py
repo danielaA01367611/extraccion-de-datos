@@ -30,5 +30,12 @@ filtro4.to_csv('entregable4.csv')
 
 #Filtro 5: Filtramos por cabecera para que muestre los primero 8 filas.
 filtro5=df.head(8)
-print(filtro5)
+#print(filtro5)
 filtro5.to_csv('entregable5.csv')
+
+#Filtro 6: Filtre por comparación, para obtener los datos donde el valor en subtotal_partida sea mayor a 77000
+filtro6=df[df["SUBTOTAL_PARTIDA"] > 77000]
+print(filtro6)
+filtro6.to_csv('entregable6.csv')
+
+
